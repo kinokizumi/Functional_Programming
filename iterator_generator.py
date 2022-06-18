@@ -44,4 +44,12 @@ for char in reverse("Bitcoin"):
     print(char)
 
 print(list(reverse("Bitcoin")))
-    
+
+######## List comprehension ########
+
+data = [2, 1, 0, -1, -2]
+power = [x**2 for x in data]
+print(power)
+
+power = (x**2 for x in data)
+print(list(power)) 
