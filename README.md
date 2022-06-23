@@ -1,3 +1,3 @@
-# Functional_Programming
+# Functional Programming
 
-Exercises to train on functional programming
+Exercises to train on functional programming based on David Mertz's book
