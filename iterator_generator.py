@@ -52,4 +52,7 @@ power = [x**2 for x in data]
 print(power)
 
 power = (x**2 for x in data)
-print(list(power)) 
+print(list(power))
+
+power = {x:x**2 for x in data}
+print(power[2]) 
