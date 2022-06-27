@@ -16,7 +16,7 @@ def running_sum(numbers):
     total = numbers[0] + running_sum(numbers[1:])
     return total
 
-numbers = list(range(11))
+numbers = range(11)
 print("Sum = ", running_sum(numbers))
 
 ### Ex.2 ###
