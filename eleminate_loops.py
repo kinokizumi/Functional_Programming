@@ -79,3 +79,5 @@ def identity_print(x):
 
 echo_FP = lambda: identity_print(input("FP -- ")) == "quit" or echo_FP()
 echo_FP()
+
+test
