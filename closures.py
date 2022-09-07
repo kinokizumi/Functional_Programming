@@ -17,7 +17,7 @@ class Adder(object):
 add5_i = Adder(5)
 print(add5_i(10))
 
-add5_i.n = 10
+add5_i.n = 10           # state is readily changeable
 print(add5_i(10))
 
 ## Closures emphasize immutability and pure functions
