@@ -92,3 +92,44 @@ def sum_square(num_repeat):
 sum_square(1)
 sum_square(100)
 
+## lru_cache: reduces execution time by using memoization technique
+
+from functools import lru_cache
+import time
+
+def fib_without_cache(n):
+    if n < 2:
+        return n
+    return fib_without_cache(n-1) + fib_without_cache(n-2)
+
+begin = time.time()
+fib_without_cache(30)
+end = time.time()
+print("Time taken without cache is", end-begin)
+
+@lru_cache(maxsize=128)
+def fib_with_cache(n):
+    if n < 2:
+        return n
+    return fib_with_cache(n-1) + fib_with_cache(n-2)
+
+begin = time.time()
+fib_with_cache(30)
+end = time.time()
+print("Time taken with cache is", end-begin)
+
+## total_ordering: provide class comparison methods (lt, le, eq, ne, gt, ge)
+
+from functools import total_ordering
+
+@total_ordering
+class employee:
+    def __init__(self, height):
+        self.height = height
+
+    def __lt__(self, other):
+        return self.height < other.height
+
+print( employee(175) > employee(165) )
+print( employee(175) < employee(165) )
+
